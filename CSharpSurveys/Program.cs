@@ -10,6 +10,7 @@ namespace CSharpSurveys
     {
         static void Main(string[] args)
         {
+            StairCase.StairCaseProblem(6);
         }
     }
 }

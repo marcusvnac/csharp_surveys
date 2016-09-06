@@ -5,7 +5,7 @@ using CSharpSurvey;
 namespace UnitTest
 {
     [TestClass]
-    public class UnitTest
+    public class MultiplicityArraysTest
     {
         [TestMethod]
         public void MultiplicityArrays_Test()
