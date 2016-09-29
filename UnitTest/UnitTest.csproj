@@ -57,6 +57,7 @@
     <Compile Include="StairCaseTest.cs" />
     <Compile Include="BinaryGapTest.cs" />
     <Compile Include="OddOccurrencesInArrayTest.cs" />
+    <Compile Include="TapeEquilibriumTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CSharpSurveys\CSharpSurveys.csproj">
