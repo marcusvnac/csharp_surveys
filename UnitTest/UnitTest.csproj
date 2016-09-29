@@ -60,6 +60,7 @@
     <Compile Include="TapeEquilibriumTest.cs" />
     <Compile Include="FrogJmpUnitTest.cs" />
     <Compile Include="PermMissingElemUnitTest.cs" />
+    <Compile Include="PermCheckUnitTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CSharpSurveys\CSharpSurveys.csproj">
