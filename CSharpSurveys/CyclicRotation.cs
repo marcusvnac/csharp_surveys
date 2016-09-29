@@ -11,17 +11,31 @@ namespace CSharpSurveys
         public static int[] Solution(int[] A, int K)
         {
             int[] result = (int[])A.Clone();
+            
 
             if ((K != 0) && (K <= A.Length))
             {
-                for (int j = 0; j < A.Length; j++)
+                if (A.Length == 2)
                 {
-                    if ((j + (K - 1)) < A.Length)
-                        result[j] = A[j + (K-1)];
-                    else
-                        result[j] = A[(j + (K - 1) - A.Length)];
+                    Array.Reverse(A);
+                    result = A;
                 }
-            } 
+                else
+                {
+                    int index = 0;
+                    for (int i = K - 1; i < A.Length; i++)
+                    {
+                        index = i - (K - 1);
+                        result[index] = A[i];
+                    }
+
+                    for (int i = 0; i < K - 1; i++)
+                    {
+                        index++;
+                        result[index] = A[i];
+                    }
+                }
+            }             
             return result;
         }
     }
