@@ -58,6 +58,7 @@
     <Compile Include="BinaryGapTest.cs" />
     <Compile Include="OddOccurrencesInArrayTest.cs" />
     <Compile Include="TapeEquilibriumTest.cs" />
+    <Compile Include="FrogJmpUnitTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CSharpSurveys\CSharpSurveys.csproj">
