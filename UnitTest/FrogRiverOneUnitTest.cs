@@ -14,5 +14,13 @@ namespace UnitTest
 
             Assert.AreEqual(FrogRiverOne.Solution(5, A), 6);
         }
+
+        [TestMethod]
+        public void FrogRiverOneUnitTestMethod2()
+        {
+            int[] A = { 1, 3, 1, 4, 2, 3, 7, 4 };
+
+            Assert.AreEqual(FrogRiverOne.Solution(5, A), -1);
+        }
     }
 }

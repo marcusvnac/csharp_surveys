@@ -15,15 +15,11 @@ namespace CSharpSurveys
 
             for (int i = 0; i < A.Length; i++)
             {
-                if (A[i] < X)
+                if (A[i] <= X)
                     leavesPosition[A[i]-1] = true;
-                else if(A[i] == X)
-                {
-                    leavesPosition[A[i] - 1] = true;
-                    if (!leavesPosition.FirstOrDefault(t => t.Equals(false)))
-                        return i;
-                }
 
+                if (!leavesPosition.Any(t => t.Equals(false)))
+                    return i;
             }
 
             return -1;
