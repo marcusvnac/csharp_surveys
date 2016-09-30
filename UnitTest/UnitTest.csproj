@@ -64,6 +64,7 @@
     <Compile Include="PermCheckUnitTest.cs" />
     <Compile Include="MissingIntegerUnitTest.cs" />
     <Compile Include="PassingCarsUnitTest.cs" />
+    <Compile Include="CountDivUnitTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CSharpSurveys\CSharpSurveys.csproj">
