@@ -46,6 +46,7 @@
     <Compile Include="BinaryGap.cs" />
     <Compile Include="BinaryTree.cs" />
     <Compile Include="FrogJmp.cs" />
+    <Compile Include="MissingInteger.cs" />
     <Compile Include="OddOccurrencesInArray.cs" />
     <Compile Include="PermCheck.cs" />
     <Compile Include="PermMissingElem.cs" />

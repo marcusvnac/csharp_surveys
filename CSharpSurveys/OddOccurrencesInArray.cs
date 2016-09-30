@@ -10,7 +10,7 @@ namespace CSharpSurveys
     {
         public static int Solution(int[] A)
         {
-            int result = 0;
+            int result;
             List<int> unpaired = new List<int>();
 
             for(int i = 0; i < A.Length; i++)
