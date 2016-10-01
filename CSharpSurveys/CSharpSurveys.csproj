@@ -58,6 +58,7 @@
     <Compile Include="Codility\PassingCars.cs" />
     <Compile Include="Codility\PermCheck.cs" />
     <Compile Include="Codility\PermMissingElem.cs" />
+    <Compile Include="Codility\StoneWall.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Codility\MultiplicityArrays.cs" />
