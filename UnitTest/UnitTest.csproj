@@ -55,6 +55,7 @@
     <Compile Include="Codility\FrogRiverOneUnitTest.cs" />
     <Compile Include="Codility\MultiplicityArraysTest.cs" />
     <Compile Include="Codility\StoneWallUnitTest.cs" />
+    <Compile Include="Codility\DominatorUnitTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StairCaseTest.cs" />
     <Compile Include="Codility\BinaryGapTest.cs" />
