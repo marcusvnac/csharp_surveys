@@ -62,6 +62,7 @@
     <Compile Include="MultiplicityArrays.cs" />
     <Compile Include="StairCase.cs" />
     <Compile Include="TapeEquilibrium.cs" />
+    <Compile Include="Triangle.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
