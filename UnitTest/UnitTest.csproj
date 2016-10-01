@@ -68,6 +68,7 @@
     <Compile Include="GenomicRangeQueryUnitTest.cs" />
     <Compile Include="MinAvgTwoSliceUnitTest.cs" />
     <Compile Include="MaxProductOfThreeUnitTest.cs" />
+    <Compile Include="DistinctUnitTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CSharpSurveys\CSharpSurveys.csproj">

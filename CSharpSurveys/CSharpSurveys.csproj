@@ -46,6 +46,7 @@
     <Compile Include="BinaryGap.cs" />
     <Compile Include="BinaryTree.cs" />
     <Compile Include="CountDiv.cs" />
+    <Compile Include="Distinct.cs" />
     <Compile Include="FrogRiverOne.cs" />
     <Compile Include="FrogJmp.cs" />
     <Compile Include="GenomicRangeQuery.cs" />
