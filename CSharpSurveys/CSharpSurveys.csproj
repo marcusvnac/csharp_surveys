@@ -43,26 +43,27 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BinaryGap.cs" />
+    <Compile Include="Codility\BinaryGap.cs" />
     <Compile Include="BinaryTree.cs" />
-    <Compile Include="CountDiv.cs" />
-    <Compile Include="Distinct.cs" />
-    <Compile Include="FrogRiverOne.cs" />
-    <Compile Include="FrogJmp.cs" />
-    <Compile Include="GenomicRangeQuery.cs" />
-    <Compile Include="MaxProductOfThree.cs" />
-    <Compile Include="MinAvgTwoSlice.cs" />
-    <Compile Include="MissingInteger.cs" />
-    <Compile Include="OddOccurrencesInArray.cs" />
-    <Compile Include="PassingCars.cs" />
-    <Compile Include="PermCheck.cs" />
-    <Compile Include="PermMissingElem.cs" />
+    <Compile Include="Codility\CountDiv.cs" />
+    <Compile Include="Codility\Distinct.cs" />
+    <Compile Include="Codility\FrogRiverOne.cs" />
+    <Compile Include="Codility\FrogJmp.cs" />
+    <Compile Include="Codility\GenomicRangeQuery.cs" />
+    <Compile Include="Codility\MaxProductOfThree.cs" />
+    <Compile Include="Codility\MinAvgTwoSlice.cs" />
+    <Compile Include="Codility\MissingInteger.cs" />
+    <Compile Include="Codility\NumberOfDiscIntersections.cs" />
+    <Compile Include="Codility\OddOccurrencesInArray.cs" />
+    <Compile Include="Codility\PassingCars.cs" />
+    <Compile Include="Codility\PermCheck.cs" />
+    <Compile Include="Codility\PermMissingElem.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="MultiplicityArrays.cs" />
+    <Compile Include="Codility\MultiplicityArrays.cs" />
     <Compile Include="StairCase.cs" />
-    <Compile Include="TapeEquilibrium.cs" />
-    <Compile Include="Triangle.cs" />
+    <Compile Include="Codility\TapeEquilibrium.cs" />
+    <Compile Include="Codility\Triangle.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -52,24 +52,25 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="FrogRiverOneUnitTest.cs" />
-    <Compile Include="MultiplicityArraysTest.cs" />
+    <Compile Include="Codility\FrogRiverOneUnitTest.cs" />
+    <Compile Include="Codility\MultiplicityArraysTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StairCaseTest.cs" />
-    <Compile Include="BinaryGapTest.cs" />
-    <Compile Include="OddOccurrencesInArrayTest.cs" />
-    <Compile Include="TapeEquilibriumTest.cs" />
-    <Compile Include="FrogJmpUnitTest.cs" />
-    <Compile Include="PermMissingElemUnitTest.cs" />
-    <Compile Include="PermCheckUnitTest.cs" />
-    <Compile Include="MissingIntegerUnitTest.cs" />
-    <Compile Include="PassingCarsUnitTest.cs" />
-    <Compile Include="CountDivUnitTest.cs" />
-    <Compile Include="GenomicRangeQueryUnitTest.cs" />
-    <Compile Include="MinAvgTwoSliceUnitTest.cs" />
-    <Compile Include="MaxProductOfThreeUnitTest.cs" />
-    <Compile Include="DistinctUnitTest.cs" />
-    <Compile Include="TriangleUnitTest.cs" />
+    <Compile Include="Codility\BinaryGapTest.cs" />
+    <Compile Include="Codility\OddOccurrencesInArrayTest.cs" />
+    <Compile Include="Codility\TapeEquilibriumTest.cs" />
+    <Compile Include="Codility\FrogJmpUnitTest.cs" />
+    <Compile Include="Codility\PermMissingElemUnitTest.cs" />
+    <Compile Include="Codility\PermCheckUnitTest.cs" />
+    <Compile Include="Codility\MissingIntegerUnitTest.cs" />
+    <Compile Include="Codility\PassingCarsUnitTest.cs" />
+    <Compile Include="Codility\CountDivUnitTest.cs" />
+    <Compile Include="Codility\GenomicRangeQueryUnitTest.cs" />
+    <Compile Include="Codility\MinAvgTwoSliceUnitTest.cs" />
+    <Compile Include="Codility\MaxProductOfThreeUnitTest.cs" />
+    <Compile Include="Codility\DistinctUnitTest.cs" />
+    <Compile Include="Codility\TriangleUnitTest.cs" />
+    <Compile Include="Codility\NumberOfDiscIntersectionsUnitTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CSharpSurveys\CSharpSurveys.csproj">
