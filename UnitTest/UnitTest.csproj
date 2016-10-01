@@ -57,6 +57,7 @@
     <Compile Include="Codility\StoneWallUnitTest.cs" />
     <Compile Include="Codility\DominatorUnitTest.cs" />
     <Compile Include="Codility\MaxSliceSumUnitTest.cs" />
+    <Compile Include="Codility\FlagsUnitTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StairCaseTest.cs" />
     <Compile Include="Codility\BinaryGapTest.cs" />

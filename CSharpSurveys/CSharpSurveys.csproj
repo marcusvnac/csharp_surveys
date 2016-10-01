@@ -48,6 +48,7 @@
     <Compile Include="Codility\CountDiv.cs" />
     <Compile Include="Codility\Distinct.cs" />
     <Compile Include="Codility\Dominator.cs" />
+    <Compile Include="Codility\Flags.cs" />
     <Compile Include="Codility\FrogRiverOne.cs" />
     <Compile Include="Codility\FrogJmp.cs" />
     <Compile Include="Codility\GenomicRangeQuery.cs" />
