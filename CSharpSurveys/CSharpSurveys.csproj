@@ -46,6 +46,7 @@
     <Compile Include="Codility\BinaryGap.cs" />
     <Compile Include="BinaryTree.cs" />
     <Compile Include="Codility\CountDiv.cs" />
+    <Compile Include="Codility\CountNonDivisible.cs" />
     <Compile Include="Codility\Distinct.cs" />
     <Compile Include="Codility\Dominator.cs" />
     <Compile Include="Codility\Flags.cs" />
