@@ -65,6 +65,7 @@
     <Compile Include="MissingIntegerUnitTest.cs" />
     <Compile Include="PassingCarsUnitTest.cs" />
     <Compile Include="CountDivUnitTest.cs" />
+    <Compile Include="GenomicRangeQueryUnitTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CSharpSurveys\CSharpSurveys.csproj">
