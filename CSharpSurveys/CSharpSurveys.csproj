@@ -57,6 +57,7 @@
     <Compile Include="Codility\GenomicRangeQuery.cs" />
     <Compile Include="Codility\MaxProductOfThree.cs" />
     <Compile Include="Codility\MaxSliceSum.cs" />
+    <Compile Include="Codility\MinAbsSum.cs" />
     <Compile Include="Codility\MinAvgTwoSlice.cs" />
     <Compile Include="Codility\MissingInteger.cs" />
     <Compile Include="Codility\NailingPlanks.cs" />

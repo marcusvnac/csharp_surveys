@@ -63,6 +63,7 @@
     <Compile Include="Codility\FibFrogUnitTest.cs" />
     <Compile Include="Codility\NailingPlanksUnitTest.cs" />
     <Compile Include="Codility\TieRopesUnitTest.cs" />
+    <Compile Include="Codility\MinAbsSumUnitTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StairCaseTest.cs" />
     <Compile Include="Codility\BinaryGapTest.cs" />
