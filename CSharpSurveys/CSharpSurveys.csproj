@@ -50,6 +50,7 @@
     <Compile Include="Codility\CountNonDivisible.cs" />
     <Compile Include="Codility\Distinct.cs" />
     <Compile Include="Codility\Dominator.cs" />
+    <Compile Include="Codility\FibFrog.cs" />
     <Compile Include="Codility\Flags.cs" />
     <Compile Include="Codility\FrogRiverOne.cs" />
     <Compile Include="Codility\FrogJmp.cs" />
@@ -58,6 +59,7 @@
     <Compile Include="Codility\MaxSliceSum.cs" />
     <Compile Include="Codility\MinAvgTwoSlice.cs" />
     <Compile Include="Codility\MissingInteger.cs" />
+    <Compile Include="Codility\NailingPlanks.cs" />
     <Compile Include="Codility\NumberOfDiscIntersections.cs" />
     <Compile Include="Codility\OddOccurrencesInArray.cs" />
     <Compile Include="Codility\PassingCars.cs" />

@@ -60,6 +60,8 @@
     <Compile Include="Codility\FlagsUnitTest.cs" />
     <Compile Include="Codility\CountNonDivisibleUnitTest.cs" />
     <Compile Include="Codility\CommonPrimeDivisorsUnitTest.cs" />
+    <Compile Include="Codility\FibFrogUnitTest.cs" />
+    <Compile Include="Codility\NailingPlanksUnitTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StairCaseTest.cs" />
     <Compile Include="Codility\BinaryGapTest.cs" />
