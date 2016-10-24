@@ -35,6 +35,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Numerics" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -72,11 +73,15 @@
     <Compile Include="ProgIntervExp\ArrayAndStrings.cs" />
     <Compile Include="ProgIntervExp\BinarySearchTree.cs" />
     <Compile Include="ProgIntervExp\Recursion.cs" />
-    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Codility\MultiplicityArrays.cs" />
+    <Compile Include="RackerRank\Warmup\CircularArrayRotation.cs" />
     <Compile Include="RackerRank\Warmup\CompareTheTriplets.cs" />
-    <Compile Include="StairCase.cs" />
+    <Compile Include="RackerRank\Warmup\DiagonalDifference.cs" />
+    <Compile Include="RackerRank\Warmup\PlusMinus.cs" />
+    <Compile Include="RackerRank\Warmup\StairCase.cs" />
+    <Compile Include="RackerRank\Warmup\TimeConversion.cs" />
+    <Compile Include="RackerRank\Warmup\VeryBigSum.cs" />
     <Compile Include="Codility\TapeEquilibrium.cs" />
     <Compile Include="Codility\Triangle.cs" />
   </ItemGroup>

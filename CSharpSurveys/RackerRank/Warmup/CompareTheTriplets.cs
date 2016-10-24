@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CSharpSurveys.RackerRank.CompareTheTriplets
+namespace CSharpSurveys.RackerRank.Warmup.CompareTheTriplets
 {
     class Solution
     {        
@@ -44,7 +44,7 @@ namespace CSharpSurveys.RackerRank.CompareTheTriplets
             Console.WriteLine(alice + " " + bob);
 
         }
-
+        /*
         static void Main(String[] args)
         {
             string[] tokens_a0 = Console.ReadLine().Split(' ');
@@ -62,5 +62,6 @@ namespace CSharpSurveys.RackerRank.CompareTheTriplets
             ComparisonChallenges(alice, bob);
 
         }
+        */
     }
 }

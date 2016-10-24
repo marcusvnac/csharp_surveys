@@ -36,6 +36,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Numerics" />
   </ItemGroup>
   <Choose>
     <When Condition="('$(VisualStudioVersion)' == '10.0' or '$(VisualStudioVersion)' == '') and '$(TargetFrameworkVersion)' == 'v3.5'">
@@ -64,11 +65,11 @@
     <Compile Include="Codility\NailingPlanksUnitTest.cs" />
     <Compile Include="Codility\TieRopesUnitTest.cs" />
     <Compile Include="Codility\MinAbsSumUnitTest.cs" />
+    <Compile Include="HackerRank\SolutionsUnitTest.cs" />
     <Compile Include="ProgIntervExp\ArrayAndStringUnitTest.cs" />
     <Compile Include="ProgIntervExp\RecursionUnitTest.cs" />
     <Compile Include="ProgIntervExp\BinarySeachTreeUnitTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="StairCaseTest.cs" />
     <Compile Include="Codility\BinaryGapTest.cs" />
     <Compile Include="Codility\OddOccurrencesInArrayTest.cs" />
     <Compile Include="Codility\TapeEquilibriumTest.cs" />
