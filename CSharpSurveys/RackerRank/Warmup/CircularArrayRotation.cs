@@ -10,6 +10,7 @@ namespace CSharpSurveys.RackerRank.Warmup.CircularArrayRotation
     public class Solution
     {
 
+        /*
         static void Main(String[] args)
         {
             
@@ -32,10 +33,10 @@ namespace CSharpSurveys.RackerRank.Warmup.CircularArrayRotation
                 Console.WriteLine(a[(n - k + m) % n]);
             }
             
-        }
+        }*/
 
         /*** Brute Force ***/
-        public static void RotateArray(int n, int k, int[] arr)
+        public static void RightRotateArray(int n, int k, int[] arr)
         {
             if (n <= 1)
                 return;
