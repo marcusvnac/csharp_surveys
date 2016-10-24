@@ -65,7 +65,8 @@
     <Compile Include="Codility\NailingPlanksUnitTest.cs" />
     <Compile Include="Codility\TieRopesUnitTest.cs" />
     <Compile Include="Codility\MinAbsSumUnitTest.cs" />
-    <Compile Include="HackerRank\SolutionsUnitTest.cs" />
+    <Compile Include="HackerRank\CrackingTheCodeUnitTest.cs" />
+    <Compile Include="HackerRank\WarmupUnitTest.cs" />
     <Compile Include="ProgIntervExp\ArrayAndStringUnitTest.cs" />
     <Compile Include="ProgIntervExp\RecursionUnitTest.cs" />
     <Compile Include="ProgIntervExp\BinarySeachTreeUnitTest.cs" />

@@ -6,7 +6,7 @@ using System.Numerics;
 namespace UnitTest.HackerRank
 {
     [TestClass]
-    public class SolutionsUnitTest
+    public class WarmupUnitTest
     {
         [TestMethod]
         public void VeryBigSumTestMethod1()
@@ -64,7 +64,7 @@ namespace UnitTest.HackerRank
             int k = 2;
 
             int[] expectedResult = { 2, 3, 1 };
-            CSharpSurveys.RackerRank.Warmup.CircularArrayRotation.Solution.RotateArray(arr.Length, k, arr);
+            CSharpSurveys.RackerRank.Warmup.CircularArrayRotation.Solution.RightRotateArray(arr.Length, k, arr);
 
             Assert.IsTrue(expectedResult.SequenceEqual(arr));
         }
