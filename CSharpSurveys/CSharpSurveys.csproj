@@ -75,9 +75,12 @@
     <Compile Include="ProgIntervExp\Recursion.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Codility\MultiplicityArrays.cs" />
+    <Compile Include="RackerRank\CrackingTheCode\BalancedBrackets.cs" />
     <Compile Include="RackerRank\CrackingTheCode\CheckBST.cs" />
     <Compile Include="RackerRank\CrackingTheCode\LeftRotation.cs" />
     <Compile Include="RackerRank\CrackingTheCode\MakingAnagrams.cs" />
+    <Compile Include="RackerRank\CrackingTheCode\QueueUsingTwoStacks.cs" />
+    <Compile Include="RackerRank\CrackingTheCode\RansomNote.cs" />
     <Compile Include="RackerRank\Warmup\CircularArrayRotation.cs" />
     <Compile Include="RackerRank\Warmup\CompareTheTriplets.cs" />
     <Compile Include="RackerRank\Warmup\DiagonalDifference.cs" />
