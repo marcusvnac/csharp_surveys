@@ -9,7 +9,7 @@ namespace CSharpSurveys.RackerRank.CrackingTheCode.QueueUsingTwoStacks
     public class Solution
     {
         enum Operation { None, Enqueue, Dequeue, Print };
-
+        /*
         static void Main(String[] args)
         {
             int q = Convert.ToInt32(Console.ReadLine());            
@@ -24,7 +24,7 @@ namespace CSharpSurveys.RackerRank.CrackingTheCode.QueueUsingTwoStacks
                 qts.ProcessQuery(p, item);
             }
         }        
-
+        */
         class QueueTwoStacks
         {
             private Stack<string> q1;

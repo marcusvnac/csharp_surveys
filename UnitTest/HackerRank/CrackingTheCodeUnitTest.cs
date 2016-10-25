@@ -1,6 +1,7 @@
 ﻿using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.IO;
+using System.Globalization;
 
 namespace UnitTest.HackerRank
 {
@@ -71,9 +72,43 @@ namespace UnitTest.HackerRank
         }
 
         [TestMethod]
-        public void QueueUsingTwoStacksTestMethod1()
+        public void FindRunningMedianTestMethod1()
         {
+            int[] a = { 12, 4, 5, 3, 8, 7 };
+            double[] expectedResult = { 12.0, 8.0, 5.0, 4.5, 5.0, 6.0 };
 
+            CSharpSurveys.RackerRank.CrackingTheCode.FindTheRunningMedian.Solution.RunningMedian rm = 
+                new CSharpSurveys.RackerRank.CrackingTheCode.FindTheRunningMedian.Solution.RunningMedian();
+
+            for (int i = 0; i < a.Length; i++)
+            {                
+                rm.AddValue(a[i]);
+                Assert.AreEqual(expectedResult[i], rm.FindMedian());                
+            }
+        }
+
+        [TestMethod]
+        public void FindRunningMedianTestMethod2()
+        {
+            CSharpSurveys.RackerRank.CrackingTheCode.FindTheRunningMedian.Solution.RunningMedian rm =
+                new CSharpSurveys.RackerRank.CrackingTheCode.FindTheRunningMedian.Solution.RunningMedian();
+
+            using (StreamReader fs = new StreamReader("HackerRank\\RunningMedian-input07.txt"))
+            {
+                int nLines = int.Parse(fs.ReadLine());
+                using (StreamReader output = new StreamReader("HackerRank\\RunningMedian-output07.txt"))
+                {
+                    string valueStr;
+                    while (nLines > 0 && (valueStr = fs.ReadLine()) != null)
+                    {
+                        string expectedResult = output.ReadLine();
+                        rm.AddValue(int.Parse(valueStr));
+                        Assert.AreEqual(expectedResult, rm.FindMedian().ToString("F1", CultureInfo.InvariantCulture));
+
+                        nLines--;
+                    }
+                }
+            }
         }
     }
 }

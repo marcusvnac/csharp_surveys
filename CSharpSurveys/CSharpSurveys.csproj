@@ -77,6 +77,7 @@
     <Compile Include="Codility\MultiplicityArrays.cs" />
     <Compile Include="RackerRank\CrackingTheCode\BalancedBrackets.cs" />
     <Compile Include="RackerRank\CrackingTheCode\CheckBST.cs" />
+    <Compile Include="RackerRank\CrackingTheCode\FindTheRunningMedian.cs" />
     <Compile Include="RackerRank\CrackingTheCode\LeftRotation.cs" />
     <Compile Include="RackerRank\CrackingTheCode\MakingAnagrams.cs" />
     <Compile Include="RackerRank\CrackingTheCode\QueueUsingTwoStacks.cs" />
