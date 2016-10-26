@@ -2,6 +2,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.IO;
 using System.Globalization;
+using System;
 
 namespace UnitTest.HackerRank
 {
@@ -107,6 +108,40 @@ namespace UnitTest.HackerRank
 
                         nLines--;
                     }
+                }
+            }
+        }
+
+
+        [TestMethod]
+        public void ContactsTestMethod1()
+        {
+            string[] operations = { "add hack", "add hackerrank", "find hac", "find hak" };
+            int[] expectedResult = { 2, 0 };
+
+            CSharpSurveys.RackerRank.CrackingTheCode.Contacts.TrieNode trie =
+                new CSharpSurveys.RackerRank.CrackingTheCode.Contacts.TrieNode();
+
+            int count = 0;
+            for (int i = 0; i < operations.Length; i++)
+            {
+                
+                string[] tokens_op = operations[i].Split(' ');
+
+                CSharpSurveys.RackerRank.CrackingTheCode.Contacts.Solution.Operation op = 
+                    (CSharpSurveys.RackerRank.CrackingTheCode.Contacts.Solution.Operation)Enum.Parse(typeof(CSharpSurveys.RackerRank.CrackingTheCode.Contacts.Solution.Operation), tokens_op[0]);
+
+                string contact = tokens_op[1];
+                    
+                switch (op)
+                {
+                    case CSharpSurveys.RackerRank.CrackingTheCode.Contacts.Solution.Operation.add:
+                        trie.AddWord(contact);
+                        break;
+                    case CSharpSurveys.RackerRank.CrackingTheCode.Contacts.Solution.Operation.find:
+                        int foundCounter = trie.FindCountPartial(contact);
+                        Assert.AreEqual(expectedResult[count++], foundCounter);
+                        break;
                 }
             }
         }

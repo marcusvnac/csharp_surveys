@@ -8,6 +8,7 @@ namespace CSharpSurveys.RackerRank.CrackingTheCode.FindTheRunningMedian
 {
     public class Solution
     {
+        /*
         static void Main(String[] args)
         {
             int n = Convert.ToInt32(Console.ReadLine());
@@ -21,6 +22,7 @@ namespace CSharpSurveys.RackerRank.CrackingTheCode.FindTheRunningMedian
                 Console.WriteLine(rm.FindMedian().ToString("F1"));
             }
         }
+        */
 
         public class RunningMedian
         {
@@ -101,7 +103,7 @@ namespace CSharpSurveys.RackerRank.CrackingTheCode.FindTheRunningMedian
             private void Rebalance()
             {
                 if (lowerHeap.Count - higherHeap.Count >= 2)
-                {
+                { 
                     int maxHeapRoot = lowerHeap.Max;
                     lowerHeap.Remove(maxHeapRoot);
 
@@ -121,7 +123,7 @@ namespace CSharpSurveys.RackerRank.CrackingTheCode.FindTheRunningMedian
                 double result = -1;
                 if (lowerHeap.Count == higherHeap.Count)
                 {
-                    result = (lowerHeap.Max + higherHeap.Min) / 2.0;                    
+                    result = (double) (lowerHeap.Max + higherHeap.Min) / 2; 
                 }
                 else if (lowerHeap.Count > higherHeap.Count)
                 {
