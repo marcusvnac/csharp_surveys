@@ -60,18 +60,12 @@ namespace CSharpSurveys.RackerRank.CrackingTheCode.MergeSort
             {
                 if(helper[helperLeft] <= helper[helperRight])
                 {
-                    if (arr[current] != helper[helperLeft])
-                    {                        
-                        arr[current] = helper[helperLeft];
-                    }
+                    arr[current] = helper[helperLeft];
                     helperLeft++;
                 }
                 else // if the right element is smaller than left element
                 {
-                    if (arr[current] != helper[helperRight])
-                    {
-                        arr[current] = helper[helperRight];
-                    }
+                    arr[current] = helper[helperRight];
                     swaps += middle - helperLeft + 1;
                     helperRight++;                    
                 }

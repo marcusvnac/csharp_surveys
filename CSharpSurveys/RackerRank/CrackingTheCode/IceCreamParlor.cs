@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,170 +20,81 @@ namespace CSharpSurveys.RackerRank.CrackingTheCode.IceCreamParlor
                 string[] a_temp = Console.ReadLine().Split(' ');
                 int[] a = Array.ConvertAll(a_temp, Int32.Parse);
 
-                int id = 1;
-                BinarySearchTree bst = new BinarySearchTree(new FlavorNode(id, a[0]));
-                for (int i=1; i<n; i++)
+                Flavor[] flavors = new Flavor[n];
+
+                for (int i=0; i<n; i++)
                 {
-                    id++;
-                    bst.AddNode(new FlavorNode(id, a[i]));
+                    flavors[i] = new Flavor(i + 1, a[i]);                    
                 }
 
-                FlavorNode[] result = bst.FindFlavors(m);
-                foreach (var item in result.OrderBy(x => x.ID))
+                Array.Sort(flavors, new FlavorComparer()); 
+
+                foreach (var flavor in flavors)
                 {
-                    Console.Write(item.ID + " ");
+                    int CostComplement = m - flavor.Cost;
+
+                    Flavor secondFlavor = BinarySearch(flavors, CostComplement, flavor.ID);
+                    if (secondFlavor != null)
+                    {
+                        if (flavor.ID < secondFlavor.ID)
+                            Console.Write(flavor.ID + " " + secondFlavor.ID);
+                        else
+                            Console.Write(secondFlavor.ID + " " + flavor.ID);
+                        
+                        break;
+                    }
                 }
                 Console.WriteLine();
+            }            
+        }
+
+        public static Flavor BinarySearch(Flavor[] arr, int x, int actualID)
+        {
+            int left = 0;
+            int right = arr.Length - 1;            
+
+            while(left <= right)
+            {
+                int mid = (left + right) / 2;
+                if (arr[mid].Cost == x && arr[mid].ID != actualID)
+                    return arr[mid];
+                else if (x > arr[mid].Cost)
+                {
+                    left = mid + 1;
+                }
+                else
+                {
+                    right = mid - 1;
+                }
+            }
+            return null;
+        }
+
+
+        public class Flavor
+        {
+            private readonly int _ID;
+            private readonly int _cost;
+
+            public Flavor(int ID, int cost)
+            {
+                _cost = cost;
+                _ID = ID;
+            }
+
+            public int Cost { get { return _cost; }  }
+            public int ID { get { return _ID; }  }
+        }
+
+        public class FlavorComparer : IComparer
+        {
+            public int Compare(object x, object y)
+            {
+                Flavor m = (Flavor)x, n = (Flavor)y;
+                int mv = m.Cost, nv = n.Cost;
+                return (mv < nv ? -1 : (mv == nv ? 0 : 1));
             }
         }
         
-        public class FlavorNode
-        {
-            public FlavorNode(FlavorNode left, FlavorNode right, int ID, int cost)
-            {
-                Left = left;
-                Right = right;
-                Cost = cost;
-                this.ID = ID;
-            }
-
-            public FlavorNode(int ID, int cost)
-            {
-                Cost = cost;
-                this.ID = ID;
-            }
-
-            public FlavorNode Left { get; set; }
-            public FlavorNode Right { get; set; }
-            public int Cost { get; set; }
-            public int ID { get; set; }
-        }
-
-        public class BinarySearchTree
-        {
-            private FlavorNode root;
-
-            public BinarySearchTree(FlavorNode first)
-            {
-                root = first;
-            }
-
-            public bool AddNode(FlavorNode newNode)
-            {
-                if (root == null)
-                {                    
-                    return false;
-                }
-                else
-                {
-                    FlavorNode actualNode = root;
-                    FlavorNode parent;
-                    int value = newNode.Cost;
-
-                    while (true)
-                    {
-                        parent = actualNode;
-
-                        if (value <= actualNode.Cost)
-                        {
-                            actualNode = actualNode.Left;
-                            if (actualNode == null)
-                            {
-                                parent.Left = newNode;
-                                return true;
-                            }
-                        }
-                        else
-                        {
-                            actualNode = actualNode.Right;
-                            if (actualNode == null)
-                            {
-                                parent.Right = newNode;
-                                return true;
-                            }
-                        }
-                    }
-
-                }
-
-            }
-
-            public FlavorNode[] FindFlavors(int m)
-            {
-                FlavorNode[] result = new FlavorNode[2];
-                FindFlavors(root, m, result);
-                return result;
-            }
-
-            public int FindFlavors(FlavorNode node, int m, FlavorNode[] flavors)
-            {
-                if (node == null)
-                    return 0;
-
-                int totalCost = 0;
-                totalCost = PreorderTraversal(node, m, flavors);
-                if (totalCost != m)
-                {
-                    ClearFlavors(flavors);
-                    totalCost = FindFlavors(node.Left, m, flavors);
-                    if (totalCost != m)
-                        totalCost = FindFlavors(node.Right, m, flavors);
-                }
-
-                return totalCost;
-            }
-
-            private void ClearFlavors(FlavorNode[] flavors)
-            {
-                flavors[0] = null;
-                flavors[1] = null;
-            }
-
-            private int PreorderTraversal(FlavorNode node, int m, FlavorNode[] flavors)
-            {
-                if (node == null || AllFlavorsFound(flavors, m))
-                    return 0;
-
-                int totalCost = 0;
-                if ((node.Cost <= m - 1) && BuyFlavor(node, flavors, m))
-                {
-                    totalCost = node.Cost;
-                }
-                    
-                totalCost += PreorderTraversal(node.Left, m, flavors);
-                totalCost += PreorderTraversal(node.Right, m, flavors);
-                return totalCost;
-            }
-
-            private bool BuyFlavor(FlavorNode node, FlavorNode[] flavors, int m)
-            {
-                if (node.Cost > m - 1)
-                    return false;
-
-                if (flavors[0] == null && flavors[1] == null)
-                {
-                    flavors[0] = node;
-                    return true;
-                }
-
-                if (flavors[0] != null)
-                {
-                    if (flavors[0].Cost + node.Cost == m)
-                    {
-                        flavors[1] = node;
-                        return true;
-                    }
-                }
-                return false;
-            }
-
-            private bool AllFlavorsFound(FlavorNode[] flavors, int m)
-            {
-                if (flavors[0] != null && flavors[1] != null)
-                    return flavors[0].Cost + flavors[1].Cost == m;
-                else
-                    return false;
-            }
-        }
     }
 }

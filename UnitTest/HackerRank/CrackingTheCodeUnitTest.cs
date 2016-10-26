@@ -201,30 +201,33 @@ namespace UnitTest.HackerRank
         [TestMethod]
         public void IceCreamParlorTestMethod1()
         {
-            int[] flavors = { 1, 4, 5, 3, 2, };
+            int[] arr = { 1, 4, 5, 3, 2, };
             string expectedResult = "1 4";
             int m = 4;
 
-            int id = 1;
-            CSharpSurveys.RackerRank.CrackingTheCode.IceCreamParlor.Solution.BinarySearchTree bst = 
-                new CSharpSurveys.RackerRank.CrackingTheCode.IceCreamParlor.Solution.BinarySearchTree(
-                    new CSharpSurveys.RackerRank.CrackingTheCode.IceCreamParlor.Solution.FlavorNode(id, flavors[0]));
-
-            for (int i = 1; i < flavors.Length; i++)
+            CSharpSurveys.RackerRank.CrackingTheCode.IceCreamParlor.Solution.Flavor[] flavors = new CSharpSurveys.RackerRank.CrackingTheCode.IceCreamParlor.Solution.Flavor[arr.Length];
+            for (int i = 0; i < arr.Length; i++)
             {
-                id++;
-                bst.AddNode(new CSharpSurveys.RackerRank.CrackingTheCode.IceCreamParlor.Solution.FlavorNode(id, flavors[i]));
+                flavors[i] = new CSharpSurveys.RackerRank.CrackingTheCode.IceCreamParlor.Solution.Flavor(i + 1, arr[i]);
             }
 
-            CSharpSurveys.RackerRank.CrackingTheCode.IceCreamParlor.Solution.FlavorNode[] result = bst.FindFlavors(m);
-            StringBuilder sb = new StringBuilder(); 
-            foreach (var item in result.OrderBy(x => x.ID))
+            Array.Sort(flavors, new CSharpSurveys.RackerRank.CrackingTheCode.IceCreamParlor.Solution.FlavorComparer());
+
+            string result = "";
+            foreach (var flavor in flavors)
             {
-                sb.Append(item.ID + " ");
-            }
-            sb.Length = sb.Length - 1;
-                        
-            Assert.AreEqual(expectedResult, sb.ToString());
+                int CostComplement = m - flavor.Cost;
+
+                CSharpSurveys.RackerRank.CrackingTheCode.IceCreamParlor.Solution.Flavor secondFlavor =
+                    CSharpSurveys.RackerRank.CrackingTheCode.IceCreamParlor.Solution.BinarySearch(flavors, CostComplement, flavor.ID);
+
+                if (secondFlavor != null)
+                {
+                    result = flavor.ID + " " + secondFlavor.ID;
+                    break;
+                }
+            }                        
+            Assert.AreEqual(expectedResult, result);
         }
 
         [TestMethod]
@@ -245,26 +248,34 @@ namespace UnitTest.HackerRank
 
                         string expectedResult = output.ReadLine();
 
-                        int id = 1;
-                        CSharpSurveys.RackerRank.CrackingTheCode.IceCreamParlor.Solution.BinarySearchTree bst =
-                            new CSharpSurveys.RackerRank.CrackingTheCode.IceCreamParlor.Solution.BinarySearchTree(
-                                new CSharpSurveys.RackerRank.CrackingTheCode.IceCreamParlor.Solution.FlavorNode(id, arr[0]));
-
-                        for (int i = 1; i < arr.Length; i++)
+                        CSharpSurveys.RackerRank.CrackingTheCode.IceCreamParlor.Solution.Flavor[] flavors = new CSharpSurveys.RackerRank.CrackingTheCode.IceCreamParlor.Solution.Flavor[n];
+                        for (int i = 0; i < n; i++)
                         {
-                            id++;
-                            bst.AddNode(new CSharpSurveys.RackerRank.CrackingTheCode.IceCreamParlor.Solution.FlavorNode(id, arr[i]));
+                            flavors[i] = new CSharpSurveys.RackerRank.CrackingTheCode.IceCreamParlor.Solution.Flavor(i + 1, arr[i]);
                         }
 
-                        CSharpSurveys.RackerRank.CrackingTheCode.IceCreamParlor.Solution.FlavorNode[] result = bst.FindFlavors(m);
-                        StringBuilder sb = new StringBuilder();
-                        foreach (var item in result.OrderBy(x => x.ID))
-                        {
-                            sb.Append(item.ID + " ");
-                        }
-                        sb.Length = sb.Length - 1;
+                        Array.Sort(flavors, new CSharpSurveys.RackerRank.CrackingTheCode.IceCreamParlor.Solution.FlavorComparer());
 
-                        Assert.AreEqual(expectedResult, sb.ToString());
+                        string result = "";
+                        foreach (var flavor in flavors)
+                        {
+                            int CostComplement = m - flavor.Cost;
+
+                            CSharpSurveys.RackerRank.CrackingTheCode.IceCreamParlor.Solution.Flavor secondFlavor =
+                                CSharpSurveys.RackerRank.CrackingTheCode.IceCreamParlor.Solution.BinarySearch(flavors, CostComplement, flavor.ID);
+
+                            if (secondFlavor != null)
+                            {
+                                if (flavor.ID < secondFlavor.ID )
+                                    result = flavor.ID + " " + secondFlavor.ID;
+                                else
+                                    result = secondFlavor.ID + " " + flavor.ID;
+
+                                break;
+                            }
+                        }
+
+                        Assert.AreEqual(expectedResult, result);
 
                         t--;
                     }
