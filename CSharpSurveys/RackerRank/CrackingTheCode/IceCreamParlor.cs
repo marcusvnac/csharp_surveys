@@ -9,7 +9,7 @@ namespace CSharpSurveys.RackerRank.CrackingTheCode.IceCreamParlor
 {
     public class Solution
     {
-        
+        /*
         static void Main(String[] args)
         {
             int t = Convert.ToInt32(Console.ReadLine());
@@ -47,6 +47,7 @@ namespace CSharpSurveys.RackerRank.CrackingTheCode.IceCreamParlor
                 Console.WriteLine();
             }            
         }
+        */
 
         public static Flavor BinarySearch(Flavor[] arr, int x, int actualID)
         {
