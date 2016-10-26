@@ -8,7 +8,7 @@ namespace CSharpSurveys.RackerRank.CrackingTheCode.BalancedBrackets
 {
     public class Solution
     {
-        /*
+        /*   
         static void Main(String[] args)
         {
             int t = Convert.ToInt32(Console.ReadLine());
@@ -32,7 +32,7 @@ namespace CSharpSurveys.RackerRank.CrackingTheCode.BalancedBrackets
 
             Stack<char> halfBracketsStack = CreateStack(brackets);
 
-            for (int i = brackets.Length/2; i< brackets.Length; i++)
+            for (int i = brackets.Length/2; i < brackets.Length; i++)
             {
                 char leftBracket = halfBracketsStack.Pop();
                 if (!IsValidCombination(leftBracket, brackets[i]))

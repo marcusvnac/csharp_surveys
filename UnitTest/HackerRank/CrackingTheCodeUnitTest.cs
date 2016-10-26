@@ -3,6 +3,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.IO;
 using System.Globalization;
 using System;
+using System.Text;
 
 namespace UnitTest.HackerRank
 {
@@ -53,10 +54,10 @@ namespace UnitTest.HackerRank
         public void BalancedBracketsTestMethod2()
         {
 
-            using (StreamReader fs = new StreamReader("HackerRank\\BalancedBrackets-input10.txt"))
+            using (StreamReader fs = new StreamReader("HackerRank\\TestFiles\\BalancedBrackets-input10.txt"))
             {
                 int nLines = int.Parse(fs.ReadLine());
-                using (StreamReader outPut = new StreamReader("HackerRank\\BalancedBrackets-output10.txt"))
+                using (StreamReader outPut = new StreamReader("HackerRank\\TestFiles\\BalancedBrackets-output10.txt"))
                 {
                     string expectedResult = outPut.ReadLine();
 
@@ -94,10 +95,10 @@ namespace UnitTest.HackerRank
             CSharpSurveys.RackerRank.CrackingTheCode.FindTheRunningMedian.Solution.RunningMedian rm =
                 new CSharpSurveys.RackerRank.CrackingTheCode.FindTheRunningMedian.Solution.RunningMedian();
 
-            using (StreamReader fs = new StreamReader("HackerRank\\RunningMedian-input07.txt"))
+            using (StreamReader fs = new StreamReader("HackerRank\\TestFiles\\RunningMedian-input07.txt"))
             {
                 int nLines = int.Parse(fs.ReadLine());
-                using (StreamReader output = new StreamReader("HackerRank\\RunningMedian-output07.txt"))
+                using (StreamReader output = new StreamReader("HackerRank\\TestFiles\\RunningMedian-output07.txt"))
                 {
                     string valueStr;
                     while (nLines > 0 && (valueStr = fs.ReadLine()) != null)
@@ -142,6 +143,131 @@ namespace UnitTest.HackerRank
                         int foundCounter = trie.FindCountPartial(contact);
                         Assert.AreEqual(expectedResult[count++], foundCounter);
                         break;
+                }
+            }
+        }
+
+        [TestMethod]
+        public void MergeSortTestMethod1()
+        {
+            int[] a = { 2, 1, 3, 1, 2 }, expectedResult = { 1, 1, 2, 2, 3 };
+
+            long swaps = CSharpSurveys.RackerRank.CrackingTheCode.MergeSort.Solution.MergeSort(a);
+
+            Assert.IsTrue(expectedResult.SequenceEqual(a));
+            Assert.AreEqual(4, swaps);
+        }
+
+        [TestMethod]
+        public void MergeSortTestMethod2()
+        {
+            int[] a = { 1, 1, 1, 2, 2 }, expectedResult = { 1, 1, 1, 2, 2 };
+
+            long swaps = CSharpSurveys.RackerRank.CrackingTheCode.MergeSort.Solution.MergeSort(a);
+
+            Assert.IsTrue(expectedResult.SequenceEqual(a));
+            Assert.AreEqual(0, swaps);
+        }
+
+        [TestMethod]
+        public void MergeSortTestMethod3()
+        {
+            CSharpSurveys.RackerRank.CrackingTheCode.FindTheRunningMedian.Solution.RunningMedian rm =
+                new CSharpSurveys.RackerRank.CrackingTheCode.FindTheRunningMedian.Solution.RunningMedian();
+
+            using (StreamReader fs = new StreamReader("HackerRank\\TestFiles\\MergeSort-input04.txt"))
+            {
+                int nDatasets = int.Parse(fs.ReadLine());                
+                using (StreamReader output = new StreamReader("HackerRank\\TestFiles\\MergeSort-output04.txt"))
+                {
+
+                    string nElements;
+                    while (nDatasets > 0 && (nElements = fs.ReadLine()) != null)
+                    {
+                        string[] arr_temp = fs.ReadLine().Split(' ');
+                        int[] arr = Array.ConvertAll(arr_temp, Int32.Parse);
+                        long expectedResult = int.Parse(output.ReadLine());
+
+                        long swaps = CSharpSurveys.RackerRank.CrackingTheCode.MergeSort.Solution.MergeSort(arr);
+
+                        Assert.AreEqual(expectedResult, swaps);
+
+                        nDatasets--;
+                    }
+                }
+            }
+        }
+
+        [TestMethod]
+        public void IceCreamParlorTestMethod1()
+        {
+            int[] flavors = { 1, 4, 5, 3, 2, };
+            string expectedResult = "1 4";
+            int m = 4;
+
+            int id = 1;
+            CSharpSurveys.RackerRank.CrackingTheCode.IceCreamParlor.Solution.BinarySearchTree bst = 
+                new CSharpSurveys.RackerRank.CrackingTheCode.IceCreamParlor.Solution.BinarySearchTree(
+                    new CSharpSurveys.RackerRank.CrackingTheCode.IceCreamParlor.Solution.FlavorNode(id, flavors[0]));
+
+            for (int i = 1; i < flavors.Length; i++)
+            {
+                id++;
+                bst.AddNode(new CSharpSurveys.RackerRank.CrackingTheCode.IceCreamParlor.Solution.FlavorNode(id, flavors[i]));
+            }
+
+            CSharpSurveys.RackerRank.CrackingTheCode.IceCreamParlor.Solution.FlavorNode[] result = bst.FindFlavors(m);
+            StringBuilder sb = new StringBuilder(); 
+            foreach (var item in result.OrderBy(x => x.ID))
+            {
+                sb.Append(item.ID + " ");
+            }
+            sb.Length = sb.Length - 1;
+                        
+            Assert.AreEqual(expectedResult, sb.ToString());
+        }
+
+        [TestMethod]
+        public void IceCreamParlorTestMethod2()
+        {
+            using (StreamReader input = new StreamReader("HackerRank\\TestFiles\\IceCreamParlor-input01.txt"))
+            {
+                int t = int.Parse(input.ReadLine());
+                using (StreamReader output = new StreamReader("HackerRank\\TestFiles\\IceCreamParlor-output01.txt"))
+                {
+                    string nStr;
+                    while (t > 0 && (nStr = input.ReadLine()) != null)
+                    {
+                        int m = int.Parse(nStr);
+                        int n = int.Parse(input.ReadLine());
+                        string[] arr_temp = input.ReadLine().Split(' ');
+                        int[] arr = Array.ConvertAll(arr_temp, Int32.Parse);
+
+                        string expectedResult = output.ReadLine();
+
+                        int id = 1;
+                        CSharpSurveys.RackerRank.CrackingTheCode.IceCreamParlor.Solution.BinarySearchTree bst =
+                            new CSharpSurveys.RackerRank.CrackingTheCode.IceCreamParlor.Solution.BinarySearchTree(
+                                new CSharpSurveys.RackerRank.CrackingTheCode.IceCreamParlor.Solution.FlavorNode(id, arr[0]));
+
+                        for (int i = 1; i < arr.Length; i++)
+                        {
+                            id++;
+                            bst.AddNode(new CSharpSurveys.RackerRank.CrackingTheCode.IceCreamParlor.Solution.FlavorNode(id, arr[i]));
+                        }
+
+                        CSharpSurveys.RackerRank.CrackingTheCode.IceCreamParlor.Solution.FlavorNode[] result = bst.FindFlavors(m);
+                        StringBuilder sb = new StringBuilder();
+                        foreach (var item in result.OrderBy(x => x.ID))
+                        {
+                            sb.Append(item.ID + " ");
+                        }
+                        sb.Length = sb.Length - 1;
+
+                        Assert.AreEqual(expectedResult, sb.ToString());
+
+                        t--;
+                    }
                 }
             }
         }

@@ -56,7 +56,7 @@ namespace CSharpSurveys.ProgIntervExp
             public int rh { get; set; } // Height of right subtree
         }
 
-        public static bool AddNote(Node root, Node newNode)
+        public static bool AddNode(Node root, Node newNode)
         {
             if (root == null)
             {
