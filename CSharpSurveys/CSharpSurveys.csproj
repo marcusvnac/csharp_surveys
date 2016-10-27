@@ -78,6 +78,7 @@
     <Compile Include="RackerRank\CrackingTheCode\BalancedBrackets.cs" />
     <Compile Include="RackerRank\CrackingTheCode\BubbleSort.cs" />
     <Compile Include="RackerRank\CrackingTheCode\CheckBST.cs" />
+    <Compile Include="RackerRank\CrackingTheCode\ConnectedCellsInGrid.cs" />
     <Compile Include="RackerRank\CrackingTheCode\Contacts.cs" />
     <Compile Include="RackerRank\CrackingTheCode\FindTheRunningMedian.cs" />
     <Compile Include="RackerRank\CrackingTheCode\IceCreamParlor.cs" />

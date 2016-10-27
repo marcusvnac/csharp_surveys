@@ -282,5 +282,52 @@ namespace UnitTest.HackerRank
                 }
             }
         }
+
+        [TestMethod]
+        public void ConnectedCellsInGridMethod1()
+        {
+            int[,] grid = { { 1, 1, 0, 0, 0 },
+                         { 0, 1, 1, 0, 0 },
+                         { 0, 0, 1, 0, 1 },
+                         { 1, 0, 0, 0, 1 },
+                         { 0, 1, 0, 1, 1} };
+            
+
+
+            CSharpSurveys.RackerRank.CrackingTheCode.ConnectedCellsInGrid.Solution.Graph graph = 
+                new CSharpSurveys.RackerRank.CrackingTheCode.ConnectedCellsInGrid.Solution.Graph();
+            for (int row = 0; row < grid.GetLength(0); row++)
+            {
+                for (int col = 0; col < grid.GetLength(1); col++)
+                {
+                    if (grid[row, col] == 1)
+                    {
+                        CSharpSurveys.RackerRank.CrackingTheCode.ConnectedCellsInGrid.Solution.Point point = 
+                            new CSharpSurveys.RackerRank.CrackingTheCode.ConnectedCellsInGrid.Solution.Point(row, col);
+                        CSharpSurveys.RackerRank.CrackingTheCode.ConnectedCellsInGrid.Solution.Node node = 
+                            new CSharpSurveys.RackerRank.CrackingTheCode.ConnectedCellsInGrid.Solution.Node(point);
+
+                        graph.AddNode(node);
+                    }
+                }                
+            }
+
+            for (int row = 0; row < grid.GetLength(0); row++)
+            {
+                for (int col = 0; col < grid.GetLength(1); col++)
+                {
+                    if (grid[row, col] == 1)
+                    {
+                        CSharpSurveys.RackerRank.CrackingTheCode.ConnectedCellsInGrid.Solution.Point point =
+                            new CSharpSurveys.RackerRank.CrackingTheCode.ConnectedCellsInGrid.Solution.Point(row, col);
+                        CSharpSurveys.RackerRank.CrackingTheCode.ConnectedCellsInGrid.Solution.Node node = graph.GetNode(point);
+                        graph.MakeConnexions(node, grid);
+                    }
+                }
+            }
+
+            Assert.AreEqual(5, graph.LargestRegion());
+        }
+
     }
 }
