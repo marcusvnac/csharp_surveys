@@ -8,7 +8,7 @@ namespace CSharpSurveys.RackerRank.CrackingTheCode.Primality
 {
     public class Solution
     {
-
+        /*
         static void Main(String[] args)
         {
             int p = Convert.ToInt32(Console.ReadLine());
@@ -18,7 +18,7 @@ namespace CSharpSurveys.RackerRank.CrackingTheCode.Primality
                 Console.WriteLine(IsPrime(n) ? "Prime" : "Not prime");
             }
         }
-
+        */
         public static bool IsPrime(int n)
         {
             if (n < 2)

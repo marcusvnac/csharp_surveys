@@ -360,5 +360,14 @@ namespace UnitTest.HackerRank
             Assert.AreEqual("6 6 -1", sb.ToString());
         }
 
+        [TestMethod]
+        public void DaviStairCaseMethod1()
+        {
+            Assert.AreEqual(1, CSharpSurveys.RackerRank.CrackingTheCode.RecursiveStaircase.Solution.DaviStaircase(1));
+            Assert.AreEqual(4, CSharpSurveys.RackerRank.CrackingTheCode.RecursiveStaircase.Solution.DaviStaircase(3));
+            Assert.AreEqual(44, CSharpSurveys.RackerRank.CrackingTheCode.RecursiveStaircase.Solution.DaviStaircase(7));
+        }
+
+
     }
 }
