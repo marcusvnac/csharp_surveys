@@ -8,6 +8,7 @@ namespace CSharpSurveys.RackerRank.CrackingTheCode.ShortestReachGraph
 {
     public class Solution
     {
+        /*
         static void Main(String[] args)
         {
             int q = Convert.ToInt32(Console.ReadLine());
@@ -46,6 +47,7 @@ namespace CSharpSurveys.RackerRank.CrackingTheCode.ShortestReachGraph
                 Console.WriteLine(sb.ToString());
             }
         }
+        */
 
         private class NodeComparer : IComparer<Node>
         {
@@ -60,6 +62,7 @@ namespace CSharpSurveys.RackerRank.CrackingTheCode.ShortestReachGraph
         {
             public int ID { get; }
             public bool Visited { get; set; }
+
             private List<Node> edgeList;
 
             public List<Node> AdjacentNodes { get { return edgeList; } }
@@ -134,7 +137,6 @@ namespace CSharpSurveys.RackerRank.CrackingTheCode.ShortestReachGraph
 
                 return distances;
             }
-                        
 
             private int[] BFS(Node start)
              {
@@ -161,7 +163,6 @@ namespace CSharpSurveys.RackerRank.CrackingTheCode.ShortestReachGraph
                                 toVisit.Enqueue(adj);
                             }
                         }
-
                     }
                 }
                 return distances;
