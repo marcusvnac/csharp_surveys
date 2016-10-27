@@ -87,6 +87,7 @@
     <Compile Include="RackerRank\CrackingTheCode\MakingAnagrams.cs" />
     <Compile Include="RackerRank\CrackingTheCode\MergeSort.cs" />
     <Compile Include="RackerRank\CrackingTheCode\MInIntHeap.cs" />
+    <Compile Include="RackerRank\CrackingTheCode\Primality.cs" />
     <Compile Include="RackerRank\CrackingTheCode\QueueUsingTwoStacks.cs" />
     <Compile Include="RackerRank\CrackingTheCode\RansomNote.cs" />
     <Compile Include="RackerRank\CrackingTheCode\ShortestReachGraph_BFS.cs" />
