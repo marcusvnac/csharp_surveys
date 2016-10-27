@@ -8,7 +8,7 @@ namespace CSharpSurveys.RackerRank.CrackingTheCode.ConnectedCellsInGrid
 {
     public class Solution
     {
-
+        /*
         static void Main(String[] args)
         {
             int n = Convert.ToInt32(Console.ReadLine());
@@ -53,6 +53,7 @@ namespace CSharpSurveys.RackerRank.CrackingTheCode.ConnectedCellsInGrid
 
         }
 
+    */
         public class Point
         {
             private int _row, _col;
@@ -126,44 +127,34 @@ namespace CSharpSurveys.RackerRank.CrackingTheCode.ConnectedCellsInGrid
                     return 0;
                 else
                 {
-                    return DFS();
+                    UnVisitNodes();
+                    int maxCountConnected = 0;
+                    foreach (var node in nodeList)
+                    {
+                        if (!node.visited)
+                        {
+                            int countConnected = DFS(node);
+                            if (maxCountConnected < countConnected)
+                                maxCountConnected = countConnected;
+                        }
+                    }
+                    return maxCountConnected;
                 }
             }
 
-            private int DFS()
+            private int DFS(Node root)
             {
-                UnVisitNodes();
-                if (nodeList.Count == 0)
+                if (root == null)
                     return 0;
+                root.visited = true;
+                int countConnected = 1;
 
-                int maxCountConnected = 0;
-
-                Queue<Node> toVisit = new Queue<Node>();
-
-                foreach (var node in nodeList)
+                foreach (var node in root.neighboors)
                 {
                     if (!node.visited)
-                        toVisit.Enqueue(node);
-
-                    int countConnected = 0;
-                    while (!(toVisit.Count == 0))
-                    {                        
-                        Node nodeVisiting = toVisit.Dequeue();
-                        if (!nodeVisiting.visited)
-                        {
-                            nodeVisiting.visited = true;
-                            foreach (var item in nodeVisiting.neighboors)
-                            {
-                                if (!item.visited)
-                                    toVisit.Enqueue(item);
-                            }
-                            countConnected++;
-                        }
-                    }
-                    if (maxCountConnected < countConnected)
-                        maxCountConnected = countConnected;
+                        countConnected += DFS(node);
                 }
-                return maxCountConnected;
+                return countConnected;
             }
 
             private void UnVisitNodes()

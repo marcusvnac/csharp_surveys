@@ -329,5 +329,36 @@ namespace UnitTest.HackerRank
             Assert.AreEqual(5, graph.LargestRegion());
         }
 
+        [TestMethod]
+        public void ShortestReachGraphTestMethod()
+        {
+            var n = 4;
+
+            CSharpSurveys.RackerRank.CrackingTheCode.ShortestReachGraph.Solution.Graph graph = 
+                new CSharpSurveys.RackerRank.CrackingTheCode.ShortestReachGraph.Solution.Graph(n);
+
+            // Creating nodes and adding to the graph
+            for (int nodeCount = 1; nodeCount <= n; nodeCount++)
+                graph.AddNode(new CSharpSurveys.RackerRank.CrackingTheCode.ShortestReachGraph.Solution.Node(nodeCount));
+
+            // Creating edges
+            graph.AddEdge(1, 2);
+            graph.AddEdge(1, 3);
+
+            int s = 1;
+
+            // Calc Shortest Distance to all nodes
+            int[] distances = graph.ShortestDistances(s);
+            StringBuilder sb = new StringBuilder();
+            for(int i = 1; i < distances.Length; i++)
+            {
+                if (distances[i] != 0)
+                    sb.Append(distances[i] + " ");
+            }
+            sb.Length = sb.Length - 1;
+
+            Assert.AreEqual("6 6 -1", sb.ToString());
+        }
+
     }
 }
