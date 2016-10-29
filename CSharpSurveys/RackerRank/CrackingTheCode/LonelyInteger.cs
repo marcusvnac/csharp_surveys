@@ -41,5 +41,16 @@ namespace CSharpSurveys.RackerRank.CrackingTheCode.FindLonelyInteger
                 return -1;
             }
         }
+
+        // Bit manipulation approach
+        static int Lonely(int[] a)
+        {
+            int res = 0;
+            foreach (var i in a)
+            {
+                res = res ^ i;
+            }
+            return res;
+        }
     }
 }
