@@ -9,14 +9,26 @@ namespace CSharpSurveys.RackerRank.CrackingTheCode.FibonacciNumbers
     public class Solution
     {
 
-        public static int Fibonacci(int n)
+        private static int Fibonacci(int n, int[] cache)
         {
             if (n == 0)
                 return 0;
             if (n == 1)
                 return 1;
 
-            return Fibonacci(n - 1) + Fibonacci(n - 2);
+            if (cache[n] > -1)
+                return cache[n];
+            else
+            {
+                cache[n] = Fibonacci(n - 1, cache) + Fibonacci(n - 2, cache);
+                return cache[n];
+            }
+        }
+
+        public static int Fibonacci(int n)
+        {
+            int[] cache = Enumerable.Repeat(-1, n + 1).ToArray();
+            return Fibonacci(n, cache);
         }
         /*
         static void Main(String[] args)

@@ -146,7 +146,7 @@ namespace CSharpSurveys.RackerRank.CrackingTheCode.ShortestReachGraph
                 Queue<Node> toVisit = new Queue<Node>();
                 toVisit.Enqueue(start);
 
-                while (!(toVisit.Count == 0))
+                while (toVisit.Count > 0)
                 {                        
                     Node nodeVisiting = toVisit.Dequeue();
                     if (!nodeVisiting.Visited)
