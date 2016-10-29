@@ -24,6 +24,38 @@ namespace CSharpSurveys.RackerRank.CrackingTheCode.BalancedBrackets
         }
         */
 
+        static bool IsBracketBalanced(string s)
+        {
+            if (s.Length % 2 != 0)
+                return false;
+
+            Stack<char> stack = new Stack<char>();
+
+            foreach (var ch in s)
+            {
+                switch (ch)
+                {
+                    case '{':
+                        stack.Push('}');
+                        break;
+                    case '[':
+                        stack.Push(']');
+                        break;
+                    case '(':
+                        stack.Push(')');
+                        break;
+                    default:
+                        if (stack.Count == 0 || stack.Peek() != ch)
+                            return false;
+
+                        stack.Pop();
+                        break;
+                }
+            }
+            return stack.Count == 0;
+        }
+
+        /*
         public static bool IsBracketBalanced(string brackets)
         {
             // If size is odd, cannot be balanced
@@ -58,5 +90,6 @@ namespace CSharpSurveys.RackerRank.CrackingTheCode.BalancedBrackets
                     || (left == '[' && right == ']')
                     || (left == '{' && right == '}');
         }
+        */
     }
 }
