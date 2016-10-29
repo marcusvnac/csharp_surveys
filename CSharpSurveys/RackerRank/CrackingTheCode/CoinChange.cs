@@ -38,5 +38,33 @@ namespace CSharpSurveys.RackerRank.CrackingTheCode.CoinChange
 
         }
 
+        public static long MakeChange(int[] coins, int money)
+        {
+            return MakeChange(coins, money, 0, new Dictionary<string, long>());
+        }
+
+        private static long MakeChange(int[] coins, int money, int index, Dictionary<string, long> memo)
+        {
+            if (money == 0)
+                return 1;
+            if (index >= coins.Length)
+                return 0;
+
+            string key = money + "-" + index;
+            if (memo.ContainsKey(key))
+                return memo[key];
+
+            int amountWithCoin = 0;
+            long ways = 0;
+            while(amountWithCoin <= money)
+            {
+                int remaing = money - amountWithCoin;
+                ways += MakeChange(coins, remaing, index + 1, memo);
+                amountWithCoin += coins[index];
+            }
+            memo.Add(key, ways);
+            return ways;
+        }
+             
     }
 }
