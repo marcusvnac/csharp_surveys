@@ -6,6 +6,12 @@ using System.Threading.Tasks;
 
 namespace CSharpSurveys.Codility
 {
+    /***
+     * 
+     * https://codility.com/programmers/lessons/7-stacks_and_queues/stone_wall/
+     * 
+     */
+      
     public static class StoneWall
     {
         public static int Solution(int[] H)
