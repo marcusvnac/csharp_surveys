@@ -24,7 +24,7 @@ namespace CSharpSurveys.RackerRank.CrackingTheCode.BalancedBrackets
         }
         */
 
-        static bool IsBracketBalanced(string s)
+        public static bool IsBracketBalanced(string s)
         {
             if (s.Length % 2 != 0)
                 return false;
