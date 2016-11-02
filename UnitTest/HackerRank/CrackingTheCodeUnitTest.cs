@@ -4,6 +4,7 @@ using System.IO;
 using System.Globalization;
 using System;
 using System.Text;
+using System.Collections.Generic;
 
 namespace UnitTest.HackerRank
 {
@@ -368,6 +369,17 @@ namespace UnitTest.HackerRank
             Assert.AreEqual(44, CSharpSurveys.RackerRank.CrackingTheCode.RecursiveStaircase.Solution.DaviStaircase(7));
         }
 
+
+        [TestMethod]
+        public void TestMethod1()
+        {
+            string input = "AMA";
+
+
+            List<string> result = CSharpSurveys.RackerRank.CrackingTheCode.AmzAbbreviation.Solution.Abbreviation(input);
+
+            Assert.IsNotNull(result);
+        }
 
     }
 }

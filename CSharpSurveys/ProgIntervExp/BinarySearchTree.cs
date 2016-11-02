@@ -126,7 +126,7 @@ namespace CSharpSurveys.ProgIntervExp
                     return root.Left;
 
                 // node with two children: Get the inorder successor (smallest in the right subtree)
-                root.Value = minValue(root.Right);
+                root.Value = MinValue(root.Right);
 
                 // Delete the inorder successor
                 root.Right = RemoveNode(root.Right, root.Value);
@@ -135,7 +135,7 @@ namespace CSharpSurveys.ProgIntervExp
             return root;
         }
 
-        private static int minValue(Node root)
+        private static int MinValue(Node root)
         {
             int minv = root.Value;
             while (root.Left != null)
