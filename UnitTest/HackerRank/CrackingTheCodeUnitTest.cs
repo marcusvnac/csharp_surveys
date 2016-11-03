@@ -371,7 +371,7 @@ namespace UnitTest.HackerRank
 
 
         [TestMethod]
-        public void TestMethod1()
+        public void AmzAbbreviationTestMethod1()
         {
             string input = "AMA";
 
@@ -381,5 +381,25 @@ namespace UnitTest.HackerRank
             Assert.IsNotNull(result);
         }
 
+        [TestMethod]
+        public void AmzAbbreviationTestMethod2()
+        {
+            string input = "Amazon";
+
+            List<string> result = CSharpSurveys.RackerRank.CrackingTheCode.AmzAbbreviation.Solution.Abbreviation2(input);
+
+            Assert.IsNotNull(result);
+        }
+
+
+        [TestMethod]
+        public void AmzAbbreviationRecursiceTestMethod1()
+        {
+            string input = "ama";
+
+            List<string> result = CSharpSurveys.RackerRank.CrackingTheCode.AmzAbbreviation.Solution.AbbreviationRecursive(input);
+
+            Assert.IsNotNull(result);
+        }
     }
 }
