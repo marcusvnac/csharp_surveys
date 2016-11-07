@@ -73,6 +73,7 @@
     <Compile Include="ProgIntervExp\ArrayAndStrings.cs" />
     <Compile Include="ProgIntervExp\BinarySearchTree.cs" />
     <Compile Include="ProgIntervExp\Recursion.cs" />
+    <Compile Include="CyclicRotation.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Codility\MultiplicityArrays.cs" />
     <Compile Include="RackerRank\CrackingTheCode\BalancedBrackets.cs" />

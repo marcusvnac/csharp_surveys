@@ -86,6 +86,7 @@
     <Compile Include="Codility\DistinctUnitTest.cs" />
     <Compile Include="Codility\TriangleUnitTest.cs" />
     <Compile Include="Codility\NumberOfDiscIntersectionsUnitTest.cs" />
+    <Compile Include="CycicRotationTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CSharpSurveys\CSharpSurveys.csproj">
