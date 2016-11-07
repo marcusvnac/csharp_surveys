@@ -66,6 +66,7 @@
     <Compile Include="Codility\TieRopesUnitTest.cs" />
     <Compile Include="Codility\MinAbsSumUnitTest.cs" />
     <Compile Include="HackerRank\CrackingTheCodeUnitTest.cs" />
+    <Compile Include="HackerRank\ChallengesUnitTest.cs" />
     <Compile Include="HackerRank\WarmupUnitTest.cs" />
     <Compile Include="ProgIntervExp\ArrayAndStringUnitTest.cs" />
     <Compile Include="ProgIntervExp\RecursionUnitTest.cs" />
@@ -105,6 +106,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="HackerRank\TestFiles\IceCreamParlor-output01.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="HackerRank\TestFiles\LongestIncreasingSubsequence-input05.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="HackerRank\TestFiles\MergeSort-input04.txt">
