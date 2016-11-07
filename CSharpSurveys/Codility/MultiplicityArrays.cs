@@ -9,7 +9,7 @@ namespace CSharpSurvey
     public class MultiplicityArrays
     {
 
-        public int solution(int[] A, int[] B)
+        public int Solution(int[] A, int[] B)
         {
             int N = A.Length;
             double[] C = new double[N];

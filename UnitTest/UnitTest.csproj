@@ -36,6 +36,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Numerics" />
   </ItemGroup>
   <Choose>
     <When Condition="('$(VisualStudioVersion)' == '10.0' or '$(VisualStudioVersion)' == '') and '$(TargetFrameworkVersion)' == 'v3.5'">
@@ -52,10 +53,39 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="MultiplicityArraysTest.cs" />
+    <Compile Include="Codility\FrogRiverOneUnitTest.cs" />
+    <Compile Include="Codility\MultiplicityArraysTest.cs" />
+    <Compile Include="Codility\StoneWallUnitTest.cs" />
+    <Compile Include="Codility\DominatorUnitTest.cs" />
+    <Compile Include="Codility\MaxSliceSumUnitTest.cs" />
+    <Compile Include="Codility\FlagsUnitTest.cs" />
+    <Compile Include="Codility\CountNonDivisibleUnitTest.cs" />
+    <Compile Include="Codility\CommonPrimeDivisorsUnitTest.cs" />
+    <Compile Include="Codility\FibFrogUnitTest.cs" />
+    <Compile Include="Codility\NailingPlanksUnitTest.cs" />
+    <Compile Include="Codility\TieRopesUnitTest.cs" />
+    <Compile Include="Codility\MinAbsSumUnitTest.cs" />
+    <Compile Include="HackerRank\CrackingTheCodeUnitTest.cs" />
+    <Compile Include="HackerRank\WarmupUnitTest.cs" />
+    <Compile Include="ProgIntervExp\ArrayAndStringUnitTest.cs" />
+    <Compile Include="ProgIntervExp\RecursionUnitTest.cs" />
+    <Compile Include="ProgIntervExp\BinarySeachTreeUnitTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="StairCaseTest.cs" />
-    <Compile Include="BinaryGapTest.cs" />
+    <Compile Include="Codility\BinaryGapTest.cs" />
+    <Compile Include="Codility\OddOccurrencesInArrayTest.cs" />
+    <Compile Include="Codility\TapeEquilibriumTest.cs" />
+    <Compile Include="Codility\FrogJmpUnitTest.cs" />
+    <Compile Include="Codility\PermMissingElemUnitTest.cs" />
+    <Compile Include="Codility\PermCheckUnitTest.cs" />
+    <Compile Include="Codility\MissingIntegerUnitTest.cs" />
+    <Compile Include="Codility\PassingCarsUnitTest.cs" />
+    <Compile Include="Codility\CountDivUnitTest.cs" />
+    <Compile Include="Codility\GenomicRangeQueryUnitTest.cs" />
+    <Compile Include="Codility\MinAvgTwoSliceUnitTest.cs" />
+    <Compile Include="Codility\MaxProductOfThreeUnitTest.cs" />
+    <Compile Include="Codility\DistinctUnitTest.cs" />
+    <Compile Include="Codility\TriangleUnitTest.cs" />
+    <Compile Include="Codility\NumberOfDiscIntersectionsUnitTest.cs" />
     <Compile Include="CycicRotationTest.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -63,6 +93,32 @@
       <Project>{36D518A7-8224-4DB7-8AA2-2D3E8F24B31C}</Project>
       <Name>CSharpSurveys</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="HackerRank\TestFiles\BalancedBrackets-input10.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="HackerRank\TestFiles\BalancedBrackets-output10.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="HackerRank\TestFiles\IceCreamParlor-input01.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="HackerRank\TestFiles\IceCreamParlor-output01.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="HackerRank\TestFiles\MergeSort-input04.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="HackerRank\TestFiles\MergeSort-output04.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="HackerRank\TestFiles\RunningMedian-input07.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="HackerRank\TestFiles\RunningMedian-output07.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

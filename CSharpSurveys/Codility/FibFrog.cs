@@ -4,13 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CSharpSurveys
+namespace CSharpSurveys.Codility
 {
-    class Program
+    public static class FibFrog
     {
-        static void Main(string[] args)
+        public static int Solution(int[] A)
         {
-            StairCase.StairCaseProblem(6);
+
+            return 0;
         }
     }
 }

@@ -5,12 +5,14 @@ using CSharpSurveys;
 namespace UnitTest
 {
     [TestClass]
-    public class StairCaseTest
+    public class CountDivUnitTest
     {
         [TestMethod]
-        public void StairCaseProblem_Test()
+        public void CountDivUnitTestMethod1()
         {
-           StairCase.StairCaseProblem(6);                      
+            int A = 6, B = 11, K = 2;
+
+            Assert.AreEqual(CountDiv.Solution(A, B, K), 3);
         }
     }
 }
