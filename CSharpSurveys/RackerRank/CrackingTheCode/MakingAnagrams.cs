@@ -8,6 +8,7 @@ namespace CSharpSurveys.RackerRank.CrackingTheCode.MakingAnagrams
 {
     public class Solution
     {
+        /*
         static void Main(String[] args)
         {
             string a = Console.ReadLine();
@@ -15,7 +16,7 @@ namespace CSharpSurveys.RackerRank.CrackingTheCode.MakingAnagrams
 
             Console.Write(CharsToDeleteToMakeAnagram(a, b));
         }
-
+        */
         public static int CharsToDeleteToMakeAnagram(string a, string b)
         {
             Dictionary<char, int> charsA = MapChars(a);

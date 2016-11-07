@@ -12,12 +12,12 @@ namespace UnitTest.ProgIntervExp
         [TestInitialize]
         public void InitializeTree()
         {            
-            BinarySearchTree.AddNote(root, new Node(3));
-            BinarySearchTree.AddNote(root, new Node(10));
-            BinarySearchTree.AddNote(root, new Node(1));
-            BinarySearchTree.AddNote(root, new Node(4));
-            BinarySearchTree.AddNote(root, new Node(7));
-            BinarySearchTree.AddNote(root, new Node(12));
+            BinarySearchTree.AddNode(root, new Node(3));
+            BinarySearchTree.AddNode(root, new Node(10));
+            BinarySearchTree.AddNode(root, new Node(1));
+            BinarySearchTree.AddNode(root, new Node(4));
+            BinarySearchTree.AddNode(root, new Node(7));
+            BinarySearchTree.AddNode(root, new Node(12));
         }
 
         [TestMethod]
@@ -74,13 +74,13 @@ namespace UnitTest.ProgIntervExp
         public void FindLowestAncertorTestMethod1()
         {
             Node localRoot = new Node(20);
-            BinarySearchTree.AddNote(localRoot, new Node(20));
-            BinarySearchTree.AddNote(localRoot, new Node(8));
-            BinarySearchTree.AddNote(localRoot, new Node(22));
-            BinarySearchTree.AddNote(localRoot, new Node(4));
-            BinarySearchTree.AddNote(localRoot, new Node(12));
-            BinarySearchTree.AddNote(localRoot, new Node(10));
-            BinarySearchTree.AddNote(localRoot, new Node(14));
+            BinarySearchTree.AddNode(localRoot, new Node(20));
+            BinarySearchTree.AddNode(localRoot, new Node(8));
+            BinarySearchTree.AddNode(localRoot, new Node(22));
+            BinarySearchTree.AddNode(localRoot, new Node(4));
+            BinarySearchTree.AddNode(localRoot, new Node(12));
+            BinarySearchTree.AddNode(localRoot, new Node(10));
+            BinarySearchTree.AddNode(localRoot, new Node(14));
 
 
             Node result = BinarySearchTree.FindLowestCommonAncestor(localRoot, 4, 14);
@@ -100,13 +100,13 @@ namespace UnitTest.ProgIntervExp
         public void IsBalancedTestMethod2()
         {
             Node localRoot = new Node(20);
-            BinarySearchTree.AddNote(localRoot, new Node(20));
-            BinarySearchTree.AddNote(localRoot, new Node(8));
-            BinarySearchTree.AddNote(localRoot, new Node(22));
-            BinarySearchTree.AddNote(localRoot, new Node(4));
-            BinarySearchTree.AddNote(localRoot, new Node(12));
-            BinarySearchTree.AddNote(localRoot, new Node(10));
-            BinarySearchTree.AddNote(localRoot, new Node(14));
+            BinarySearchTree.AddNode(localRoot, new Node(20));
+            BinarySearchTree.AddNode(localRoot, new Node(8));
+            BinarySearchTree.AddNode(localRoot, new Node(22));
+            BinarySearchTree.AddNode(localRoot, new Node(4));
+            BinarySearchTree.AddNode(localRoot, new Node(12));
+            BinarySearchTree.AddNode(localRoot, new Node(10));
+            BinarySearchTree.AddNode(localRoot, new Node(14));
 
 
             var result = BinarySearchTree.IsBalanced(localRoot);
@@ -126,13 +126,13 @@ namespace UnitTest.ProgIntervExp
         public void IsBalanced2TestMethod2()
         {
             Node localRoot = new Node(20);
-            BinarySearchTree.AddNote(localRoot, new Node(20));
-            BinarySearchTree.AddNote(localRoot, new Node(8));
-            BinarySearchTree.AddNote(localRoot, new Node(22));
-            BinarySearchTree.AddNote(localRoot, new Node(4));
-            BinarySearchTree.AddNote(localRoot, new Node(12));
-            BinarySearchTree.AddNote(localRoot, new Node(10));
-            BinarySearchTree.AddNote(localRoot, new Node(14));
+            BinarySearchTree.AddNode(localRoot, new Node(20));
+            BinarySearchTree.AddNode(localRoot, new Node(8));
+            BinarySearchTree.AddNode(localRoot, new Node(22));
+            BinarySearchTree.AddNode(localRoot, new Node(4));
+            BinarySearchTree.AddNode(localRoot, new Node(12));
+            BinarySearchTree.AddNode(localRoot, new Node(10));
+            BinarySearchTree.AddNode(localRoot, new Node(14));
 
 
             var result = BinarySearchTree.IsBalanced2(localRoot);
@@ -145,12 +145,12 @@ namespace UnitTest.ProgIntervExp
         public void UnbalancedBinaryTreeTestMethod1()
         {
             Node localRoot = new Node(6);
-            BinarySearchTree.AddNote(localRoot, new Node(4));
-            BinarySearchTree.AddNote(localRoot, new Node(7));
-            BinarySearchTree.AddNote(localRoot, new Node(2));
-            BinarySearchTree.AddNote(localRoot, new Node(5));
-            BinarySearchTree.AddNote(localRoot, new Node(1));
-            BinarySearchTree.AddNote(localRoot, new Node(3));
+            BinarySearchTree.AddNode(localRoot, new Node(4));
+            BinarySearchTree.AddNode(localRoot, new Node(7));
+            BinarySearchTree.AddNode(localRoot, new Node(2));
+            BinarySearchTree.AddNode(localRoot, new Node(5));
+            BinarySearchTree.AddNode(localRoot, new Node(1));
+            BinarySearchTree.AddNode(localRoot, new Node(3));
 
             var result = BinarySearchTree.BreadthFirstSearchTraversal(localRoot);
 
@@ -172,10 +172,10 @@ namespace UnitTest.ProgIntervExp
         public void RemoveNodeTestMethod1()
         {
             Node localRoot = new Node(50);
-            BinarySearchTree.AddNote(localRoot, new Node(40));
-            BinarySearchTree.AddNote(localRoot, new Node(70));
-            BinarySearchTree.AddNote(localRoot, new Node(60));
-            BinarySearchTree.AddNote(localRoot, new Node(80));
+            BinarySearchTree.AddNode(localRoot, new Node(40));
+            BinarySearchTree.AddNode(localRoot, new Node(70));
+            BinarySearchTree.AddNode(localRoot, new Node(60));
+            BinarySearchTree.AddNode(localRoot, new Node(80));
 
             var result = BinarySearchTree.BreadthFirstSearchTraversal(localRoot);
 
