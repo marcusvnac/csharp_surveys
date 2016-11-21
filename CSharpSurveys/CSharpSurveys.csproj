@@ -70,6 +70,7 @@
     <Compile Include="Codility\StoneWall.cs" />
     <Compile Include="Codility\TieRopes.cs" />
     <Compile Include="HackerRank\Challenges\LongestIncreasingSubsequence.cs" />
+    <Compile Include="HackerRank\Challenges\RadioTransmiter.cs" />
     <Compile Include="ProgIntervExp\ActorGraph.cs" />
     <Compile Include="ProgIntervExp\ArrayAndStrings.cs" />
     <Compile Include="ProgIntervExp\BinarySearchTree.cs" />

@@ -42,6 +42,51 @@ namespace UnitTest.HackerRank
             Assert.AreEqual(1966, res);
         }
 
+        [TestMethod]
+        public void RadioTransmiterSubsequenceTestMethod1()
+        {
+            int res;
+            using (StreamReader input = new StreamReader("HackerRank\\TestFiles\\RadioTransmiter-input10.txt"))
+            {
+                string[] tokens_n = input.ReadLine().Split(' ');
+                Convert.ToInt32(tokens_n[0]);
+                int k = Convert.ToInt32(tokens_n[1]);
+                string[] x_temp = input.ReadLine().Split(' ');
+                int[] x = Array.ConvertAll(x_temp, Int32.Parse);
 
+                res = CSharpSurveys.HackerRank.Challenges.RadioTransmiter.Solution.Transmiters(k, x);  
+            }
+
+            Assert.AreEqual(2440, res);
+        }
+
+        [TestMethod]
+        public void RadioTransmiterSubsequenceTestMethod2()
+        {            
+            int k = 1;
+            int[] x = { 1, 2, 3, 4, 5 };
+
+            int res = CSharpSurveys.HackerRank.Challenges.RadioTransmiter.Solution.Transmiters(k, x);
+
+            Assert.AreEqual(2, res);
+        }
+
+        [TestMethod]
+        public void RadioTransmiterSubsequenceTestMethod3()
+        {
+            int res;
+            using (StreamReader input = new StreamReader("HackerRank\\TestFiles\\RadioTransmiter-input06.txt"))
+            {
+                string[] tokens_n = input.ReadLine().Split(' ');
+                Convert.ToInt32(tokens_n[0]);
+                int k = Convert.ToInt32(tokens_n[1]);
+                string[] x_temp = input.ReadLine().Split(' ');
+                int[] x = Array.ConvertAll(x_temp, Int32.Parse);
+
+                res = CSharpSurveys.HackerRank.Challenges.RadioTransmiter.Solution.Transmiters(k, x);
+            }
+
+            Assert.AreEqual(620, res);
+        }
     }
 }
