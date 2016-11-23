@@ -88,5 +88,31 @@ namespace UnitTest.HackerRank
 
             Assert.AreEqual(620, res);
         }
+
+        [TestMethod]
+        public void LilysHomeworkTestMethod1()
+        {
+            int res;
+            using (StreamReader input = new StreamReader("HackerRank\\TestFiles\\LilysHomework-input09.txt"))
+            {
+                input.ReadLine();
+                int[] a = Array.ConvertAll(input.ReadLine().Split(' '), int.Parse);
+
+                res = CSharpSurveys.HackerRank.Challenges.LilysHomework.Solution.LilysHomework(a);
+            }
+
+            Assert.AreEqual(100, res);
+        }
+
+
+        [TestMethod]
+        public void LilysHomeworkTestMethod2()
+        {
+            int[] a = { 2, 5, 3, 1 };
+
+            int res = CSharpSurveys.HackerRank.Challenges.LilysHomework.Solution.LilysHomework(a);
+
+            Assert.AreEqual(2, res);
+        }
     }
 }

@@ -5,6 +5,7 @@ namespace CSharpSurveys.HackerRank.Challenges.LongestIncreasingSubsequence
 {
     public class Solution
     {
+        /*
         static void Main(String[] args)
         {
             int n = int.Parse(Console.ReadLine());
@@ -15,7 +16,7 @@ namespace CSharpSurveys.HackerRank.Challenges.LongestIncreasingSubsequence
 
             Console.WriteLine(LongestSubseq(arr, n));
         }
-
+        */
         // Add boundary case, when array n is zero
         // Depend on smart pointers
         public static int LongestSubseq(int[] arr, int n)
