@@ -1,6 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.IO;
+using System.Linq;
 
 namespace UnitTest.HackerRank
 {
@@ -113,6 +114,17 @@ namespace UnitTest.HackerRank
             int res = CSharpSurveys.HackerRank.Challenges.LilysHomework.Solution.LilysHomework(a);
 
             Assert.AreEqual(2, res);
+        }
+
+        [TestMethod]
+        public void QuickSortTestMethod()
+        {
+            int[] a = { 5, 8, 1, 3, 7, 9, 2 };
+            int[] res = { 1, 2, 3, 5, 7, 8, 9 };
+
+            CSharpSurveys.HackerRank.Challenges.QuickSort.Solution.QuickSort(a);
+
+            Assert.IsTrue(a.SequenceEqual(res));
         }
     }
 }
