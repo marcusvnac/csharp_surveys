@@ -126,5 +126,49 @@ namespace UnitTest.HackerRank
 
             Assert.IsTrue(a.SequenceEqual(res));
         }
+
+        [TestMethod]
+        public void MandragoraTestMethod1()
+        {
+            using (StreamReader input = new StreamReader("HackerRank\\TestFiles\\Mandragora-input01.txt"))
+            {
+                using (StreamReader output = new StreamReader("HackerRank\\TestFiles\\Mandragora-output01.txt"))
+                {                    
+                    var t = int.Parse(input.ReadLine());
+                    for (int i = 0; i < t; i++)
+                    {
+                        long expected = long.Parse(output.ReadLine());
+
+                        int.Parse(input.ReadLine());
+                        int[] h = Array.ConvertAll(input.ReadLine().Split(' '), int.Parse);
+                        long res = CSharpSurveys.HackerRank.Challenges.Mandragora.Solution.MaxXP(h);
+
+                        Assert.AreEqual(expected, res);
+                    }
+                }
+
+            }
+        }
+
+        [TestMethod]
+        public void MandragoraTestMethod2()
+        {
+            int[] h = { 3, 2, 2 };
+            
+            var res = CSharpSurveys.HackerRank.Challenges.Mandragora.Solution.MaxXP(h);
+
+            Assert.AreEqual(10, res);
+        }
+
+
+        [TestMethod]
+        public void MandragoraTestMethod3()
+        {
+            int[] h = { 5, 3, 2, 2 };
+
+            var res = CSharpSurveys.HackerRank.Challenges.Mandragora.Solution.MaxXP(h);
+
+            Assert.AreEqual(24, res);
+        }
     }
 }

@@ -8,6 +8,7 @@ namespace CSharpSurveys.HackerRank.Challenges.QuickSort
 {
     public static class Solution
     {
+        /*
         static void Main(String[] args)
         {
             int _ar_size = Convert.ToInt32(Console.ReadLine());
@@ -16,6 +17,7 @@ namespace CSharpSurveys.HackerRank.Challenges.QuickSort
             QuickSort(_ar, 0, _ar_size - 1);
             Console.WriteLine(string.Join(" ", _ar));
         }
+        */
 
         public static void QuickSort(int[] arr)
         {
