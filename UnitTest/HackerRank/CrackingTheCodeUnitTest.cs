@@ -368,38 +368,5 @@ namespace UnitTest.HackerRank
             Assert.AreEqual(4, CSharpSurveys.RackerRank.CrackingTheCode.RecursiveStaircase.Solution.DaviStaircase(3));
             Assert.AreEqual(44, CSharpSurveys.RackerRank.CrackingTheCode.RecursiveStaircase.Solution.DaviStaircase(7));
         }
-
-
-        [TestMethod]
-        public void AmzAbbreviationTestMethod1()
-        {
-            string input = "AMA";
-
-
-            List<string> result = CSharpSurveys.RackerRank.CrackingTheCode.AmzAbbreviation.Solution.Abbreviation(input);
-
-            Assert.IsNotNull(result);
-        }
-
-        [TestMethod]
-        public void AmzAbbreviationTestMethod2()
-        {
-            string input = "Amazon";
-
-            List<string> result = CSharpSurveys.RackerRank.CrackingTheCode.AmzAbbreviation.Solution.Abbreviation2(input);
-
-            Assert.IsNotNull(result);
-        }
-
-
-        [TestMethod]
-        public void AmzAbbreviationRecursiceTestMethod1()
-        {
-            string input = "ama";
-
-            List<string> result = CSharpSurveys.RackerRank.CrackingTheCode.AmzAbbreviation.Solution.AbbreviationRecursive(input);
-
-            Assert.IsNotNull(result);
-        }
     }
 }

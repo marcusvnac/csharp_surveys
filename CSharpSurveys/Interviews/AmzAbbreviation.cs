@@ -4,46 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CSharpSurveys.RackerRank.CrackingTheCode.AmzAbbreviation
+namespace CSharpSurveys.Interviews
 {
-    public static class Solution
+    public static class AmzAbbreviation
     {
-
-        /*
-        public string Abbreviation(string input)
-        {
-            List<string> abbreviations = new List<string>();
-            int n = input.Length;
-
-            if (n < 2)
-                return input;
-
-            if (n == 2)
-            {
-                if (input[0] == input[1])
-                    return input[0] + "2";
-                else
-                    return input;
-            }
-
-            for (int i = 0; i < input.Length; i++)
-            {
-                int c = i + 1;
-                while (c < input.Length && input[c] == input[i])
-                {
-                    c++;
-                }
-                if (c - i != 1)
-                {
-                    input = input.Substring(0, i + 1) + (c - i) + S.substring(c);
-                    i++;
-                }
-
-            }
-            return input;
-        }
-        */
-
         public static List<string> Abbreviation(string input)
         {
             List<string> abbreviations = new List<string>(); // List containing the abbreviations
@@ -158,9 +122,6 @@ namespace CSharpSurveys.RackerRank.CrackingTheCode.AmzAbbreviation
             result = result && AbbreviationRecursive(input, idx + 1, 0, abbreviations);
             return result;
         }
-
-        // huinan@amazon.com
-
     }
 
 }
