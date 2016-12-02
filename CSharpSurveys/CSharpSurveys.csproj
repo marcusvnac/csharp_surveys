@@ -95,7 +95,7 @@
     <Compile Include="HackerRank\CrackingTheCode\MakingAnagrams.cs" />
     <Compile Include="HackerRank\CrackingTheCode\MergeSort.cs" />
     <Compile Include="HackerRank\CrackingTheCode\MInIntHeap.cs" />
-    <Compile Include="HackerRank\CrackingTheCode\AmzAbbreviation.cs" />
+    <Compile Include="Interviews\AmzAbbreviation.cs" />
     <Compile Include="HackerRank\CrackingTheCode\Primality.cs" />
     <Compile Include="HackerRank\CrackingTheCode\QueueUsingTwoStacks.cs" />
     <Compile Include="HackerRank\CrackingTheCode\RansomNote.cs" />

@@ -68,6 +68,7 @@
     <Compile Include="HackerRank\CrackingTheCodeUnitTest.cs" />
     <Compile Include="HackerRank\ChallengesUnitTest.cs" />
     <Compile Include="HackerRank\WarmupUnitTest.cs" />
+    <Compile Include="Interviews\InterviewsUnitTest.cs" />
     <Compile Include="ProgIntervExp\ArrayAndStringUnitTest.cs" />
     <Compile Include="ProgIntervExp\RecursionUnitTest.cs" />
     <Compile Include="ProgIntervExp\BinarySeachTreeUnitTest.cs" />
